@@ -60,6 +60,8 @@ def main():
     g.api = ZMApi(options=api_options)
 
     Auth = g.api.get_auth()
+
+    """ Monitors"""
     Monitors = g.api.monitors()
 
     """ Events """
@@ -77,6 +79,7 @@ def main():
     E3 = Events.events[00].event['Event']
     Id = Events.events[00].event['Event']['Id']
 
+    """ Event - Monitor - Frame """
     g.Event, g.Monitor, g.Frame = g.api.get_all_event_data(4364)
     event = g.Event
     monitor = g.Monitor
@@ -91,6 +94,7 @@ def main():
     status = version["status"]
     zm_version = version["zm_version"]
 
+    """ State """
     Authenticated = g.api.authenticated
     States = g.api.states
 
