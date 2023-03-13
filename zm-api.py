@@ -95,7 +95,7 @@ def main():
     Id = Events.events[00].event['Event']['Id']
 
     """ Event - Monitor - Frame """
-    g.Event, g.Monitor, g.Frame = g.api.get_all_event_data(4364)
+    g.Event, g.Monitor, g.Frame = g.api.get_all_event_data(Id)
     event = g.Event
     monitor = g.Monitor
     frame = g.Frame
